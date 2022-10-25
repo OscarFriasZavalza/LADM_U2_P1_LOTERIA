@@ -1,18 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/encabezado"
+        android:layout_width="wrap_content"
+        android:layout_height="155dp"
+        android:src="@drawable/encabezado" />
+
+    <ImageView
+        android:id="@+id/img_carta"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/carta1" />
+
+    <VideoView
+        android:id="@+id/video"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:visibility="gone"
+        android:background="@color/teal_700"/>
 
     <TextView
+        android:id="@+id/texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="La chalupa"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="28sp"/>
+
+    <Button
+        android:id="@+id/btn_empezar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#F3BC2B5B"
+        android:text="INICIAR" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        >
+
+        <ImageButton
+            android:id="@+id/btn_pausar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/pausar"
+            android:enabled="false" />
+
+        <ImageButton
+            android:id="@+id/btn_detener"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/ganador"
+            android:layout_marginLeft="25dp"
+            android:enabled="false"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_barajear"
+            android:layout_width="75dp"
+            android:layout_height="70dp"
+            android:background="@drawable/barajear"
+            android:layout_marginLeft="45dp"
+            android:enabled="false"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_pausar"
+            android:text="PAUSAR"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginRight="28dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_loteria"
+            android:text="LOTERIA"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginLeft="45dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_barajear"
+            android:text="BARAJEAR"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginLeft="60dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
